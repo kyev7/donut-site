@@ -3,14 +3,113 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Donuts – My Favorite Dessert</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Donuts 🍩 — My Favorite Dessert</title>
+
+  <!-- Google Font (optional but nice) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>Donuts 🍩</h1></header>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">🍩 Donuts</a>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#types">Types</a>
+        <a href="#gallery">Gallery</a>
+        <a class="btn" href="#cta">Get One</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <p>If you can read this, GitHub Pages is working.</p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1>Soft, sweet, and unbeatable.</h1>
+          <p>Donuts are my go-to dessert. Simple glaze, chocolate iced, maple bar—doesn’t matter. Warm dough + icing = instant happiness.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#types">See favorites</a>
+            <a class="btn ghost" href="#about">Why I love them</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img alt="Stack of colorful donuts"
+               src="https://images.unsplash.com/photo-1541976076758-347942db1970?q=80&w=1200&auto=format&fit=crop" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <h2>Why donuts?</h2>
+        <p>
+          They’re quick, shareable, and always hit the spot. Saturday mornings,
+          study breaks, late-night runs—donuts just work. The best part is the
+          variety: one box can make everyone happy.
+        </p>
+      </div>
+    </section>
+
+    <!-- TYPES -->
+    <section id="types" class="section alt">
+      <div class="container">
+        <h2>My top picks</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Classic Glazed</h3>
+            <p>Light, shiny, and slightly warm if you time it right. Perfect with coffee.</p>
+          </article>
+          <article class="card">
+            <h3>Chocolate Iced</h3>
+            <p>Rich frosting over soft dough. Sweet, but never too much.</p>
+          </article>
+          <article class="card">
+            <h3>Maple Bar</h3>
+            <p>Maple icing + pillowy bar shape = elite road-trip snack.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="grid">
+          <img alt="Pink frosted donut"
+               src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop" />
+          <img alt="Glazed donuts close up"
+               src="https://images.unsplash.com/photo-1511974035430-5de47d3b95da?q=80&w=1200&auto=format&fit=crop" />
+          <img alt="Assorted donut box"
+               src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1200&auto=format&fit=crop" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="cta" class="section cta">
+      <div class="container narrow">
+        <h2>Craving one now?</h2>
+        <p>Support your local donut shop. Fresh is best—and they always taste better when you share.</p>
+        <a class="btn big" href="#top">Back to top</a>
+      </div>
+    </section>
   </main>
-  <footer><p>© 2025</p></footer>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Donuts Fan Page · Built with GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // little touch: current year + smooth scroll
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
